@@ -1,6 +1,6 @@
 # Hüma
 
-Üniversite öğrencileri için sohbet eden, kaynak gösteren yapay zekâ asistanı. Öğrencinin sorularını üniversitenin herkese açık sayfalarında ve yönetmeliklerinde arayıp cevabın hangi sayfaya dayandığını gösterir. Ders anlatır, eklenen fotoğraf ve PDF'leri okur.
+Üniversite öğrencileri için sohbet eden, kaynak gösteren yapay zekâ asistanı. Öğrencinin sorularını üniversitenin herkese açık sayfalarında ve yönetmeliklerinde arayıp cevabın hangi sayfaya dayandığını gösterir. Ders anlatır, çalışma programı hazırlar, eklenen fotoğraf ve PDF'leri okur.
 
 Bağımsız bir öğrenci projesidir, herhangi bir üniversitenin resmî hizmeti değildir. Bu depo yalnız tanıtım içindir; kaynak kod gizlidir.
 
@@ -13,6 +13,10 @@ Bağımsız bir öğrenci projesidir, herhangi bir üniversitenin resmî hizmeti
 ## Ekran görüntüleri
 
 Görüntüler uygulamanın kendisinden alındı, cevaplar gerçek model cevaplarıdır. PDF örneği deneme amaçlı küçük bir nottur.
+
+**Çalışma programı**
+
+![Öğrencinin sınav tarihlerine göre gün gün hazırlanan çalışma programı](ekran/calisma-programi.webp)
 
 **Ders anlatımı**
 
@@ -31,7 +35,7 @@ Görüntüler uygulamanın kendisinden alındı, cevaplar gerçek model cevaplar
 ## Neler yapıyor
 
 - Üniversite sorularını taranmış sayfalarda arar, kaynağını gösterir; kaynakta yoksa uydurmak yerine bulamadığını söyler
-- Sohbet eder, ders anlatır, örnek çözer
+- Sohbet eder, ders anlatır, örnek çözer, gün gün çalışma programı hazırlar
 - Fotoğraf ve PDF okur; PDF'in kelime sayısına göre daha çok mesaj hakkı düşer
 - Bölüm, sınıf gibi notları sonraki sohbetlerde hatırlar
 - Sohbetler ve dosyalar sunucuda saklanmaz
@@ -45,7 +49,7 @@ Görüntüler uygulamanın kendisinden alındı, cevaplar gerçek model cevaplar
 | Cevap | Claude Haiku 5.5, araç kullanımı, akarak yazım, kaynak atıfları |
 | Sunucu | FastAPI |
 | Arayüz | Çerçevesiz HTML, CSS ve JavaScript |
-| Kalite | 171 otomatik test, 147 soruluk ölçüm seti, GitHub Actions |
+| Kalite | 176 otomatik test, 147 soruluk ölçüm seti, genel soru seti, GitHub Actions |
 
 ## Ölçülen sonuçlar
 
@@ -53,11 +57,11 @@ Görüntüler uygulamanın kendisinden alındı, cevaplar gerçek model cevaplar
 
 | Ölçü | Sonuç |
 |---|---|
-| İlk kelimeye kadar süre (ortanca) | 1,24 sn |
-| Soruların %90'ında ilk kelime | 1,83 sn içinde |
-| Hakem puanı: doğru / kısmen / yanlış | 103 / 43 / 1 |
+| İlk kelimeye kadar süre (ortanca) | 1,67 sn (14 soruluk tekrar ölçümü) |
+| Hakem puanı: doğru / kısmen / yanlış | 108 / 39 / 0 |
+| Yanlışlıkla genel sayılan üniversite sorusu | 0 |
 
-Puanlar başka bir yapay zekâ hakeminden gelir, bağımsız bir sınav değildir. Sorular geliştirme sırasında görüldü; gerçek kullanıcılarla ölçüm henüz yapılmadı.
+147 soruluk ölçümün ortasında API yavaşladığı için süre orada 2,08 sn çıktı; bu yüzden aynı sorulardan 14'ü yeniden ölçüldü. Puanlar başka bir yapay zekâ hakeminden gelir, bağımsız bir sınav değildir. Sorular geliştirme sırasında görüldü; gerçek kullanıcılarla ölçüm henüz yapılmadı.
 
 ## Geliştiren
 
