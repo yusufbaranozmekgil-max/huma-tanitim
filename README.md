@@ -49,7 +49,7 @@ Görüntüler uygulamanın kendisinden alındı, cevaplar gerçek model cevaplar
 | Cevap | Claude Haiku 5.5, araç kullanımı, akarak yazım, kaynak atıfları |
 | Sunucu | FastAPI |
 | Arayüz | Çerçevesiz HTML, CSS ve JavaScript |
-| Kalite | 176 otomatik test, 147 soruluk ölçüm seti, genel soru seti, GitHub Actions |
+| Kalite | 177 otomatik test, 147 soruluk ölçüm seti, genel soru seti, GitHub Actions |
 
 ## Ölçülen sonuçlar
 
